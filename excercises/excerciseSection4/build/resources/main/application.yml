@@ -1,0 +1,7 @@
+myuser:
+  id: "jortiz"
+  secret: "987654"
+  first-name: "Jose"
+  last-name: "Ortiz"
+mywallet:
+  funds: "10"

@@ -1,0 +1,30 @@
+{
+  "groups": [{
+    "name": "myuser",
+    "type": "com.ob1ju4n.rsad.MyAppConfig",
+    "sourceType": "com.ob1ju4n.rsad.MyAppConfig"
+  }],
+  "properties": [
+    {
+      "name": "myuser.first-name",
+      "type": "java.lang.String",
+      "sourceType": "com.ob1ju4n.rsad.MyAppConfig"
+    },
+    {
+      "name": "myuser.id",
+      "type": "java.lang.String",
+      "sourceType": "com.ob1ju4n.rsad.MyAppConfig"
+    },
+    {
+      "name": "myuser.last-name",
+      "type": "java.lang.String",
+      "sourceType": "com.ob1ju4n.rsad.MyAppConfig"
+    },
+    {
+      "name": "myuser.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.ob1ju4n.rsad.MyAppConfig"
+    }
+  ],
+  "hints": []
+}
