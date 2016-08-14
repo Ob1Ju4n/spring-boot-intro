@@ -1,0 +1,15 @@
+{
+  "name": "excerciseSection5",
+  "homepage": "https://github.com/Ob1Ju4n/spring-boot-intro",
+  "description": "Excercise for section 5 from the Udemy RSAD course",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/main/resources/static/lib/",
+    "test",
+    "tests"
+  ]
+}

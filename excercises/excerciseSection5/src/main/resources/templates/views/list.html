@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title th:text="#{title.window}">RSAD - Watches</title>
+    <link rel="stylesheet" href="../../static/lib/bootstrap/dist/css/bootstrap.min.css" th:href="@{/lib/bootstrap/dist/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../../static/css/styles.css" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+    <div class="row">
+        <div class="col-xs-12 col-sm-2">
+            <h1 align="center" th:text="#{title.page}">Watches</h1>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+            <div class="row-content custom-content" th:each="watch : ${watches}">
+                <div class="media-body">
+                    <h2 class="media-heading">
+                        <span th:text="${watch.name}">Watch Name</span>
+                        <span class="label label-info" th:if="${watch.available}">In stock</span>
+                        <span class="label label-danger" th:if="${not watch.available}">Out of stock</span>
+                        <span class="badge" th:text="${watch.price}">$ Watch Price USD</span>
+                    </h2>
+                    <p style="padding:15px;"></p>
+                    <p th:text="${watch.description}">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="media-right media-middle">
+                    <a href="#"><img class="media-object img-thumbnail custom-img" src="../../static/img/steel-silverleather-front.jpg" th:src="@{/img/}+${watch.imgName}" alt="pebble-steel"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

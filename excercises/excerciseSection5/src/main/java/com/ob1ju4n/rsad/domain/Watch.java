@@ -8,6 +8,8 @@ public class Watch {
     private String name;
     private String price;
     private boolean available;
+    private String description;
+    private String imgName;
 
     public String getName() {
         return name;
@@ -33,12 +35,30 @@ public class Watch {
         this.available = available;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getImgName() {
+        return imgName;
+    }
+
+    public void setImgName(String imgName) {
+        this.imgName = imgName;
+    }
+
     @Override
     public String toString() {
         return "Watch{" +
                 "name='" + name + '\'' +
                 ", price='" + price + '\'' +
                 ", available=" + available +
+                ", description='" + description + '\'' +
+                ", imgName='" + imgName + '\'' +
                 '}';
     }
 }

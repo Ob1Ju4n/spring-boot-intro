@@ -1,0 +1,23 @@
+.row-content {
+    margin: 0px auto;
+    padding: 50px 0px;
+    border-bottom: 1px ridge;
+}
+
+.custom-img{
+    width: 180px;
+    height: 125px;
+}
+
+.row-table-error {
+    margin: 0px auto;
+    padding: 20px 50px;
+}
+
+p {
+    text-align: justify;
+}
+
+td:first-child {
+    width: 20%;
+}

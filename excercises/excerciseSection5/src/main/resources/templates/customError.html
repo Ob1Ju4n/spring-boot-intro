@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title th:text="#{title.window}">No page</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap/dist/css/bootstrap.min.css" th:href="@{/lib/bootstrap/dist/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../static/css/styles.css" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+    <div class="row-table-error">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2">Error Summary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Timestamp</td>
+                    <td th:text="${timestamp}"></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td th:text="${status}"></td>
+                </tr>
+                <tr>
+                    <td>Error</td>
+                    <td th:text="${error}"></td>
+                </tr>
+                <tr>
+                    <td>Message</td>
+                    <td th:text="${message}"></td>
+                </tr>
+                <tr>
+                    <td>Path</td>
+                    <td th:text="${path}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
