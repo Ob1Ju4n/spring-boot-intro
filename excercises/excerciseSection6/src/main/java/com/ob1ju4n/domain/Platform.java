@@ -23,6 +23,11 @@ public class Platform {
     public Platform() {
     }
 
+    public Platform(String name, Manufacturer manufacturer) {
+        this.name = name;
+        this.manufacturer = manufacturer;
+    }
+
     public long getId() {
         return id;
     }

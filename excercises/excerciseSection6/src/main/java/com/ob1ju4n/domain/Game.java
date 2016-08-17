@@ -13,15 +13,32 @@ public class Game {
     @Id
     @GeneratedValue
     private long id;
+
     private String name;
     private Boolean exclusive;
     private Double score;
+
+    @Temporal(TemporalType.DATE)
     private Date releaseDate;
+
+    @Column(columnDefinition = "TEXT")
+    private String description;
+
+    private String imgName;
 
     @ManyToMany
     private List<Platform> platforms;
 
     public Game() {}
+
+    public Game(String name, Boolean exclusive, Double score, Date releaseDate, String description, List<Platform> platforms) {
+        this.name = name;
+        this.exclusive = exclusive;
+        this.score = score;
+        this.releaseDate = releaseDate;
+        this.description = description;
+        this.platforms = platforms;
+    }
 
     public long getId() {
         return id;
@@ -63,6 +80,22 @@ public class Game {
         this.releaseDate = releaseDate;
     }
 
+    public String getImgName() {
+        return imgName;
+    }
+
+    public void setImgName(String imgName) {
+        this.imgName = imgName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public List<Platform> getPlatforms() {
         return platforms;
     }
@@ -79,6 +112,7 @@ public class Game {
                 ", exclusive=" + exclusive +
                 ", score=" + score +
                 ", releaseDate=" + releaseDate +
+                ", description=" + description+
                 ", platforms=" + platforms +
                 '}';
     }

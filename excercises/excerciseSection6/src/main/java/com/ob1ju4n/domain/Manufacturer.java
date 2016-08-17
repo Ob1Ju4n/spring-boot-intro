@@ -21,6 +21,13 @@ public class Manufacturer {
     @OneToMany(mappedBy = "manufacturer")
     private List<Platform> platforms;
 
+    public Manufacturer() {
+    }
+
+    public Manufacturer(String name) {
+        this.name = name;
+    }
+
     public long getId() {
         return id;
     }
