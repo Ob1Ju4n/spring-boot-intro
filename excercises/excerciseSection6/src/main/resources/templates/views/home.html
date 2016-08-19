@@ -15,30 +15,34 @@
     <div class="col-xs-12 col-sm-2">
         <h1 align="center" th:text="#{title.page}">Page Title</h1>
     </div>
-    <div class="col-xs-12 col-sm-8">
-        <div class="row-content custom-content">
-            <div class="media-body">
-                <h2 class="media-heading">
-                    <span th:text="${game.name}">Game Name</span>
-                    <span class="label label-info" th:if="${game.exclusive}">Exclusive</span>
-                    <span class="label label-info" th:if="${not game.exclusive}">Multiplatform</span>
-                    <span class="label label-success" th:if="${game.score ge 8}"  th:text="${game.score}">Score</span>
-                    <span class="label label-warning" th:if="${game.score lt 8} and ${game.score ge 5}" th:text="${game.score}">Score</span>
-                    <span class="label label-danger" th:if="${game.score lt 5}" th:text="${game.score}">Score</span>
-                    <div th:each="platform : ${game.platforms}">
-                        <span class="badge" th:text="${platform.name}">Platform</span>
-                    </div>
-                    <!-- <span class="badge" th:text="${watch.price}">$ Watch Price USD</span> -->
-                </h2>
-                <p th:text="${game.description}">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="media-right media-middle">
-                <a href="#"><img class="media-object img-thumbnail custom-img" src="../../static/img/cod_bop3.jpg" th:src="@{/img/}+${game.imgName}" alt="No image available"/></a>
-            </div>
-        </div>
+    <div class="col-xs-12 col-sm-8 row-table-error">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="4">Game Wish-List</th>
+                </tr>
+                <tr>
+                    <th>Game Name</th>
+                    <th>Requisite to buy</th>
+                    <th>Already Fulfilled</th>
+                    <th>Responsible</th>
+                </tr>
+            </thead>
+            <tbody th:each="wish : ${wishes}">
+                <tr>
+                    <td style="text-align: center;">
+                        <span th:text="${wish.game.name}" style="float:left;">A really long game name</span>
+                        <a href="#" th:href="|@{/gtb/wish/}${wish.game.id}|"><img class="thumbnail-img" src="../../static/img/xcom2.jpg" th:src="@{/img/}+${wish.game.imgName}" alt="No image available"/></a>
+                    </td>
+                    <td th:text="${wish.requirement}">Description of the requisite to buy the game</td>
+                    <td style="text-align: center">
+                        <span class="label label-success" th:if="${wish.fulfilled}">Yes</span>
+                        <span class="label label-danger" th:if="${not wish.fulfilled}">No</span>
+                    </td>
+                    <td th:text="${wish.responsible}">Responsible for buying the game</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 </body>

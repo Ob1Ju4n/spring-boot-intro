@@ -16,8 +16,8 @@ insert into platform values (9, 'Wii', 3);
 insert into platform values (10, 'Gamecube', 3);
 
 --Games
-insert into game ("ID","NAME","EXCLUSIVE","SCORE","RELEASE_DATE","DESCRIPTION","IMG_NAME") values (1, 'The Witcher 3: Wild Hunt', false, 10, '2015-05-19',NULL, NULL );
-insert into game ("ID","NAME","EXCLUSIVE","SCORE","RELEASE_DATE","DESCRIPTION","IMG_NAME") values (2, 'Bloodborne', true, 10, '2015-03-24', NULL, NULL );
+insert into game ("ID","NAME","EXCLUSIVE","SCORE","RELEASE_DATE","DESCRIPTION","IMG_NAME") values (1, 'The Witcher 3: Wild Hunt', false, 10, '2015-05-19',NULL, 'tw3_wh.jpg' );
+insert into game ("ID","NAME","EXCLUSIVE","SCORE","RELEASE_DATE","DESCRIPTION","IMG_NAME") values (2, 'Bloodborne', true, 10, '2015-03-24', NULL, 'bloodborne.jpg' );
 insert into game ("ID","NAME","EXCLUSIVE","SCORE","RELEASE_DATE","DESCRIPTION","IMG_NAME") values (3, 'Call of Duty: Black Ops 3', false, 7, '2015-11-06', 'Call of Duty: Black Ops 3 will once again send the first-person shooter franchise into the future, where "cutting-edge military robotics define warfare," according to an official description of the game on the Call of Duty website. It will also see the return of Treyarch''s signature Zombies mode.', 'cod_bop3.jpg');
 
 --Game_Platforms

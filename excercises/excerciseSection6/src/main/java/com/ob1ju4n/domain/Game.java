@@ -1,5 +1,7 @@
 package com.ob1ju4n.domain;
 
+import com.ob1ju4n.util.Queryable;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -8,7 +10,7 @@ import java.util.List;
  * Created by Juan on 16/08/2016.
  */
 @Entity
-public class Game {
+public class Game extends Queryable{
 
     @Id
     @GeneratedValue
