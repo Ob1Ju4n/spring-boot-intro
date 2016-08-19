@@ -24,7 +24,7 @@ public class HomeController {
     public String home(Model model){
 
         model.addAttribute("game", gameService.getLatestGame());
-        return "index";
+        return "home";
     }
 
 

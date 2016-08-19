@@ -27,6 +27,12 @@ insert into game_platforms values (2,1);
 insert into game_platforms values (3,1);
 insert into game_platforms values (3,5);
 
+--Wishes
+insert into wish ("ID","RESPONSIBLE","REQUIREMENT","FULFILLED","GAME_ID") values (1,'Ob1Ju4n','Discounted',true,1);
+insert into wish ("ID","RESPONSIBLE","REQUIREMENT","FULFILLED","GAME_ID") values (2,'Slayer','On release if reviews +9',true,3);
+insert into wish ("ID","RESPONSIBLE","REQUIREMENT","FULFILLED","GAME_ID") values (3,'Ob1Ju4n','Pre-Order',true,2);
+
+
 --Test
 select g.name as Game, p.name as Platform  from game g, platform p, game_platforms gp
 where g.id = gp.games_id
