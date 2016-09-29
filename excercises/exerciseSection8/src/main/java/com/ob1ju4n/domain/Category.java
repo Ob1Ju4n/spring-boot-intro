@@ -1,5 +1,7 @@
 package com.ob1ju4n.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -14,10 +16,7 @@ public class Category {
     private Long id;
 
     @Column(nullable = false)
-    private String categoryName;
-
-    @OneToMany(mappedBy = "category")
-    private Set<Item> items;
+    private String name;
 
     public Category() {
     }
@@ -30,28 +29,18 @@ public class Category {
         this.id = id;
     }
 
-    public String getCategoryName() {
-        return categoryName;
+    public String getName() {
+        return name;
     }
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
-    public Set<Item> getItems() {
-        return items;
-    }
-
-    public void setItems(Set<Item> items) {
-        this.items = items;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public String toString() {
         return "Category{" +
-                "id=" + id +
-                ", categoryName='" + categoryName + '\'' +
-                ", items=" + items +
+                "name='" + name + '\'' +
                 '}';
     }
 }

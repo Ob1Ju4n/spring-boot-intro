@@ -1,0 +1,2 @@
+insert into category ("ID","NAME") values (1,'Clothing');
+insert into item ("ID","IMG_NAME","NAME","PRICE","REMARKS","CATEGORY_ID") values (1,null,'Croma DS t-shirts','10','Dark Souls original designs for t-shirts ranging from small to Xtra large sizes.',1);

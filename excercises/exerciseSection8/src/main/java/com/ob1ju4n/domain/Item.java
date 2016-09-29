@@ -1,5 +1,7 @@
 package com.ob1ju4n.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 
 /**
@@ -22,6 +24,7 @@ public class Item {
     private String price;
 
     @ManyToOne
+    //@JsonBackReference
     private Category category;
 
     public Item() {
@@ -78,12 +81,8 @@ public class Item {
     @Override
     public String toString() {
         return "Item{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", remarks='" + remarks + '\'' +
-                ", imgName='" + imgName + '\'' +
-                ", price='" + price + '\'' +
-                ", category=" + category +
                 '}';
     }
 }
